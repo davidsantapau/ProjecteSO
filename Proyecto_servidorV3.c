@@ -7,7 +7,14 @@
 #include <stdio.h>
 #include <mysql.h>
 #include <pthread.h>
+
+
+
+//-std=c99 `mysql_config --cflags --libs`
+
 int cont= 0;
+int sockets[100];
+
 typedef struct{
 	char orden[20];
 }TOrden;
@@ -512,7 +519,7 @@ void *AtenderCliente(void *socket)
 		}
 			
 			//situaciones
-		if (codigo==0)
+		if (codigo==0) //Desconectar
 		{
 				int socket;
 				printf("Desconectar socket %d\n", sock_conn);
@@ -520,7 +527,28 @@ void *AtenderCliente(void *socket)
 				pthread_mutex_lock(&mutex);
 				int e= EliminarLista (&lista_conectados,socket);
 				pthread_mutex_unlock(&mutex);
-				close(sock_conn);
+				
+				int j;
+				j=0;
+				strcpy(respuesta, "6/");
+				char numero[10];
+				sprintf(numero, "%d", lista_conectados.num);
+				strcat(respuesta, numero);
+				
+				while ( j < lista_conectados.num)
+				{
+					strcat(respuesta, "/");
+					strcat (respuesta, lista_conectados.usuarios[j].jugador);
+					j = j + 1;
+				}
+/*				write (sock_conn,respuesta, strlen(respuesta));*/
+				
+				//enviar por todos los sockets q tengo conectados en ese momento
+				int k;
+				for(k=0; k<lista_conectados.num; k++)
+					write(sockets[k],respuesta, strlen(respuesta));
+				
+/*				close(sock_conn);*/
 				terminar=1;
 		}
 			   
@@ -537,12 +565,12 @@ void *AtenderCliente(void *socket)
 				{//no hay usuarios con ese nom
 				    int r = Registro(rnom,rpword,cont);
 					cont++;
-					strcpy(respuesta, "1");
+					strcpy(respuesta, "1/0");
 					
 				}
 				else //usuario exitente
 				{		
-					strcpy(respuesta, "-1");
+					strcpy(respuesta, "1/-1");
 					printf("Error Registro");
 /*				      int num;*/
 /*				      num = atoi(respuesta);*/
@@ -559,15 +587,48 @@ void *AtenderCliente(void *socket)
 				int lerr= Login(lnom, lpword);
 				if (lerr==0)
 				{
-					strcpy ( respuesta, "1");
+					strcpy ( respuesta, "2/0");
 					char jugador[20];
 					int socket;
 					strcpy(jugador, lnom);
 					socket=sock_conn;
 					pthread_mutex_lock(&mutex);
+					write (sock_conn, respuesta, strlen(respuesta));
+					cont=cont+1;
+					
+					pthread_mutex_unlock (&mutex); // Ya puedes interrumpirme
+					
 					int p= PonLista(&lista_conectados, jugador, socket);
-					pthread_mutex_unlock(&mutex);
+					// notificar a todos los clientes conectados
+					int j;
+					j=0;
+					strcpy(respuesta, "6/0/");
+					char numero[10];
+					sprintf(numero, "%d", lista_conectados.num);
+					strcat(respuesta, numero);
+					
+					while ( j < lista_conectados.num)
+					{
+						strcat(respuesta, "/");
+						strcat (respuesta, lista_conectados.usuarios[j].jugador);
+/*						strcat(respuesta, "/");*/
+						
+						j = j + 1;
+					}
+					strcat(respuesta, "/");
+					printf("%s\n", respuesta);
+/*					respuesta[strlen(respuesta)-1]='\0';*/
+/*					printf("%s\n", respuesta);*/
+					/*write (sock_conn,respuesta, strlen(respuesta));*/
+					
+					//enviar por todos los sockets q tengo conectados en ese momento
+					int k;
+					for(k=0; k<lista_conectados.num; k++)
+						write(sockets[k],respuesta, strlen(respuesta));
+					
+					/*pthread_mutex_unlock(&mutex);*/
 					/*printf("re\n");*/
+					
 									}
 				else
 					strcpy (respuesta, "2");
@@ -585,7 +646,7 @@ void *AtenderCliente(void *socket)
 			
 				if (C1==0)
 				{
-					sprintf (respuesta,"%s\n",C1nom);
+					sprintf (respuesta,"3/0/%s\n",C1nom);
 					
 				}
 				else
@@ -605,7 +666,7 @@ void *AtenderCliente(void *socket)
 					
 					if (C2 > 0)
 					{
-						sprintf (respuesta,"%d\n", C2);
+						sprintf (respuesta,"4/-1/%d\n", C2);
 						
 					}
 					else
@@ -624,7 +685,7 @@ void *AtenderCliente(void *socket)
 				int C3 = Consulta3(C3nom);
 				if (C3 >= 0)
 				{
-					sprintf (respuesta," %d\n", C3);
+					sprintf (respuesta,"5/-1/ %d\n", C3);
 					
 				}
 				else
@@ -664,7 +725,7 @@ int main(int argc, char *argv[])
 	int sock_listen;
 	struct sockaddr_in serv_adr;
 	pthread_t thread[100];
-	int sockets[100];
+	/*int sockets[100];*/
 	
 	
 	// INICIALITZACIONS
@@ -682,7 +743,7 @@ int main(int argc, char *argv[])
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	
 	// escucharemos en el port 9050
-	serv_adr.sin_port = htons(9051);
+	serv_adr.sin_port = htons(9050);
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Error al bind");
 	//La cola de peticiones pendientes no podr? ser superior a 4
@@ -707,9 +768,7 @@ int main(int argc, char *argv[])
 	for (i=0;i<100;i++){
 		pthread_join(thread[i],NULL);
 	}
-
-	
-	
+		
 }
 
 
