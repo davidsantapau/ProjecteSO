@@ -22,3 +22,40 @@ C:\Users\Usuari\Desktop\ProyectoSO\Proyecto_cliente\Proyecto_cliente\obj\x86\Deb
 C:\Users\Usuari\Desktop\ProyectoSO\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form1.resources
 C:\Users\Usuari\Desktop\ProyectoSO\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Properties.Resources.resources
 C:\Users\Usuari\Desktop\ProyectoSO\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csproj.GenerateResource.Cache
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.exe
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.pdb
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csprojResolveAssemblyReference.cache
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form1.resources
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Properties.Resources.resources
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csproj.GenerateResource.Cache
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.exe
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.pdb
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.exe
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.pdb
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.exe
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.pdb
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csprojResolveAssemblyReference.cache
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form1.resources
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form2.resources
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form3.resources
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Properties.Resources.resources
+C:\Users\Usuari\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csproj.GenerateResource.Cache
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.exe
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.pdb
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.exe
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.pdb
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csprojResolveAssemblyReference.cache
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form1.resources
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form3.resources
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Properties.Resources.resources
+C:\Users\campo\Desktop\Nueva carpeta\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csproj.GenerateResource.Cache
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.exe
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.pdb
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.exe
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\bin\Debug\Proyecto_cliente.pdb
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csprojResolveAssemblyReference.cache
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form1.resources
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form3.resources
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Properties.Resources.resources
+C:\Users\campo\Desktop\ProjecteSO_v3\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.csproj.GenerateResource.Cache
+C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Debug\Proyecto_cliente.Form3.resources
