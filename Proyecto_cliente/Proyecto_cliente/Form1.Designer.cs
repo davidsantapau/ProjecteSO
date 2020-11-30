@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Juego = new System.Windows.Forms.GroupBox();
+=======
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.Juego = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+>>>>>>> dev-v4
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registro = new System.Windows.Forms.Button();
@@ -41,19 +52,34 @@
             this.IniciarSesion = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.MasLarga = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Desconectar = new System.Windows.Forms.Button();
-            this.Aceptar = new System.Windows.Forms.Button();
             this.Conectar = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+=======
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consula1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
+>>>>>>> dev-v4
             this.Juego.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Juego
             // 
             this.Juego.BackColor = System.Drawing.Color.DarkCyan;
+<<<<<<< HEAD
+=======
+            this.Juego.Controls.Add(this.label5);
+            this.Juego.Controls.Add(this.label4);
+            this.Juego.Controls.Add(this.button4);
+            this.Juego.Controls.Add(this.button2);
+            this.Juego.Controls.Add(this.textBox2);
+            this.Juego.Controls.Add(this.button3);
+>>>>>>> dev-v4
             this.Juego.Controls.Add(this.dataGridView1);
             this.Juego.Controls.Add(this.Registro);
             this.Juego.Controls.Add(this.label3);
@@ -63,23 +89,29 @@
             this.Juego.Controls.Add(this.IniciarSesion);
             this.Juego.Controls.Add(this.label1);
             this.Juego.Controls.Add(this.textBox1);
-            this.Juego.Controls.Add(this.MasLarga);
-            this.Juego.Controls.Add(this.radioButton2);
-            this.Juego.Controls.Add(this.radioButton1);
             this.Juego.Controls.Add(this.Desconectar);
-            this.Juego.Controls.Add(this.Aceptar);
             this.Juego.Controls.Add(this.Conectar);
+            this.Juego.Controls.Add(this.menuStrip1);
             this.Juego.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Juego.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.Juego.Location = new System.Drawing.Point(41, 24);
             this.Juego.Margin = new System.Windows.Forms.Padding(2);
             this.Juego.Name = "Juego";
             this.Juego.Padding = new System.Windows.Forms.Padding(2);
             this.Juego.Size = new System.Drawing.Size(561, 375);
+=======
+            this.Juego.Location = new System.Drawing.Point(11, 11);
+            this.Juego.Margin = new System.Windows.Forms.Padding(2);
+            this.Juego.Name = "Juego";
+            this.Juego.Padding = new System.Windows.Forms.Padding(2);
+            this.Juego.Size = new System.Drawing.Size(564, 389);
+>>>>>>> dev-v4
             this.Juego.TabIndex = 1;
             this.Juego.TabStop = false;
             this.Juego.Text = "Juego";
             // 
+<<<<<<< HEAD
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
@@ -103,6 +135,85 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(400, 223);
+=======
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(355, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(173, 18);
+            this.label4.TabIndex = 23;
+            // 
+            // button4
+            // 
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button4.Location = new System.Drawing.Point(447, 174);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(81, 32);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Rechazar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(355, 174);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(74, 32);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Aceptar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(376, 86);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(129, 23);
+            this.textBox2.TabIndex = 19;
+            // 
+            // button3
+            // 
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button3.Location = new System.Drawing.Point(408, 108);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(74, 32);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Invitar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.MediumTurquoise;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nom});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.Location = new System.Drawing.Point(193, 145);
+>>>>>>> dev-v4
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -133,12 +244,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(164, 24);
+            this.label3.Location = new System.Drawing.Point(180, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(133, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Consultas";
+            this.label3.Text = "Nombre del jugador";
             // 
             // label2
             // 
@@ -191,12 +302,17 @@
             // 
             // textBox1
             // 
+<<<<<<< HEAD
             this.textBox1.Location = new System.Drawing.Point(167, 45);
+=======
+            this.textBox1.Location = new System.Drawing.Point(183, 67);
+>>>>>>> dev-v4
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 23);
+            this.textBox1.Size = new System.Drawing.Size(130, 23);
             this.textBox1.TabIndex = 6;
             // 
+<<<<<<< HEAD
             // MasLarga
             // 
             this.MasLarga.AutoSize = true;
@@ -233,6 +349,8 @@
             this.radioButton1.Text = "Dame el jugador con más partidas ganadas";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> dev-v4
             // Desconectar
             // 
             this.Desconectar.BackColor = System.Drawing.Color.Aqua;
@@ -247,6 +365,7 @@
             this.Desconectar.UseVisualStyleBackColor = false;
             this.Desconectar.Click += new System.EventHandler(this.Desconectar_Click);
             // 
+<<<<<<< HEAD
             // Aceptar
             // 
             this.Aceptar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -259,12 +378,18 @@
             this.Aceptar.UseVisualStyleBackColor = true;
             this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
             // 
+=======
+>>>>>>> dev-v4
             // Conectar
             // 
             this.Conectar.BackColor = System.Drawing.Color.Aqua;
             this.Conectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Conectar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+<<<<<<< HEAD
             this.Conectar.Location = new System.Drawing.Point(15, 24);
+=======
+            this.Conectar.Location = new System.Drawing.Point(14, 48);
+>>>>>>> dev-v4
             this.Conectar.Margin = new System.Windows.Forms.Padding(2);
             this.Conectar.Name = "Conectar";
             this.Conectar.Size = new System.Drawing.Size(104, 35);
@@ -273,19 +398,80 @@
             this.Conectar.UseVisualStyleBackColor = false;
             this.Conectar.Click += new System.EventHandler(this.Conectar_Click);
             // 
+<<<<<<< HEAD
+=======
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(2, 18);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(560, 24);
+            this.menuStrip1.TabIndex = 20;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // consultasToolStripMenuItem
+            // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consula1ToolStripMenuItem,
+            this.consulta2ToolStripMenuItem,
+            this.consulta3ToolStripMenuItem});
+            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.consultasToolStripMenuItem.Text = "Consultas";
+            // 
+            // consula1ToolStripMenuItem
+            // 
+            this.consula1ToolStripMenuItem.Name = "consula1ToolStripMenuItem";
+            this.consula1ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.consula1ToolStripMenuItem.Text = "Dame el jugador con más victorias";
+            this.consula1ToolStripMenuItem.Click += new System.EventHandler(this.consula1ToolStripMenuItem_Click);
+            // 
+            // consulta2ToolStripMenuItem
+            // 
+            this.consulta2ToolStripMenuItem.Name = "consulta2ToolStripMenuItem";
+            this.consulta2ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.consulta2ToolStripMenuItem.Text = "La duración de la partida más larga";
+            this.consulta2ToolStripMenuItem.Click += new System.EventHandler(this.consulta2ToolStripMenuItem_Click);
+            // 
+            // consulta3ToolStripMenuItem
+            // 
+            this.consulta3ToolStripMenuItem.Name = "consulta3ToolStripMenuItem";
+            this.consulta3ToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
+            this.consulta3ToolStripMenuItem.Text = "Victorias de un jugador";
+            this.consulta3ToolStripMenuItem.Click += new System.EventHandler(this.consulta3ToolStripMenuItem_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(364, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(152, 17);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "¿A quién vas a invitar?";
+            // 
+>>>>>>> dev-v4
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(830, 422);
             this.Controls.Add(this.Juego);
+=======
+            this.ClientSize = new System.Drawing.Size(643, 422);
+            this.Controls.Add(this.Juego);
+            this.MainMenuStrip = this.menuStrip1;
+>>>>>>> dev-v4
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Juego";
             this.Juego.ResumeLayout(false);
             this.Juego.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -300,15 +486,25 @@
         private System.Windows.Forms.Button IniciarSesion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton MasLarga;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button Desconectar;
-        private System.Windows.Forms.Button Aceptar;
         private System.Windows.Forms.Button Conectar;
         private System.Windows.Forms.Button Registro;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nom;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consula1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta3ToolStripMenuItem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
+>>>>>>> dev-v4
     }
 }
 
