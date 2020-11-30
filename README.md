@@ -1,11 +1,11 @@
 # ProyectoSO
 Version 2 generada por David
-<<<<<<< HEAD
-Version 2 Regenerada por Cristina
 
 
 
-=======
+
+
+
 
 Version 2 Regenerada por Cristina
 
