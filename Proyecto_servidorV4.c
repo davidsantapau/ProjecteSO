@@ -530,7 +530,7 @@ void *AtenderCliente(void *socket)
 		buff[ret]='\0'; //fin de string
 		
 		//Escribimos en consola quien se ha conectado
-		printf ("El código de peticion es: %s\n",buff);
+		printf ("El cÃ³digo de peticion es: %s\n",buff);
 		/*int i =1;*/
 		
 		//Servicios
@@ -545,11 +545,9 @@ void *AtenderCliente(void *socket)
 			i++;
 		}
 			
-<<<<<<< HEAD:Proyecto_servidorV3.c
-			//situaciones
-=======
+
 		                                           	//situaciones
->>>>>>> dev-v4:Proyecto_servidorV4.c
+
 		if (codigo==0) //Desconectar
 		{
 				int socket;
@@ -577,11 +575,9 @@ void *AtenderCliente(void *socket)
 				//enviar por todos los sockets q tengo conectados en ese momento
 				int k;
 				for(k=0; k<lista_conectados.num; k++)
-<<<<<<< HEAD:Proyecto_servidorV3.c
-					write(sockets[k],respuesta, strlen(respuesta));
-=======
+
 					write(lista_conectados.usuarios[k].socket,respuesta, strlen(respuesta));
->>>>>>> dev-v4:Proyecto_servidorV4.c
+
 				
 /*				close(sock_conn);*/
 				terminar=1;
@@ -659,11 +655,9 @@ void *AtenderCliente(void *socket)
 					//enviar por todos los sockets q tengo conectados en ese momento
 					int k;
 					for(k=0; k<lista_conectados.num; k++)
-<<<<<<< HEAD:Proyecto_servidorV3.c
-						write(sockets[k],respuesta, strlen(respuesta));
-=======
+
 						write(lista_conectados.usuarios[k].socket,respuesta, strlen(respuesta));
->>>>>>> dev-v4:Proyecto_servidorV4.c
+
 					
 					/*pthread_mutex_unlock(&mutex);*/
 					/*printf("re\n");*/
@@ -816,11 +810,9 @@ int main(int argc, char *argv[])
 	serv_adr.sin_addr.s_addr = htonl(INADDR_ANY);
 	
 	// escucharemos en el port 9050
-<<<<<<< HEAD:Proyecto_servidorV3.c
-	serv_adr.sin_port = htons(9050);
-=======
+
 	serv_adr.sin_port = htons(9770);
->>>>>>> dev-v4:Proyecto_servidorV4.c
+
 	if (bind(sock_listen, (struct sockaddr *) &serv_adr, sizeof(serv_adr)) < 0)
 		printf ("Error al bind");
 	//La cola de peticiones pendientes no podr? ser superior a 4
