@@ -17,27 +17,28 @@ namespace Proyecto_cliente
         int invitacio = 0;//para saber si tenemos invitacion o no
         Socket server;
         Thread atender;
-<<<<<<< HEAD
-=======
         delegate void DelegadoParaPonerTexto(string texto);
->>>>>>> dev-v4
+
         public Form1()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-<<<<<<< HEAD
-=======
         public void Invitacio(string respuesta)
         {
             this.label4.Text = respuesta;//Notificacion de invitacion
         }
->>>>>>> dev-v4
+
+        public void Benvinguda(string missatge)
+        {
+            this.label1.Text = missatge;
+        }
         private void Atenderservidor()
         {
             while (true)
@@ -49,48 +50,28 @@ namespace Proyecto_cliente
 
                 switch (codigo)
                 {
-<<<<<<< HEAD
-                    case 1:
-                        if (Convert.ToInt32(trozos[1]) == 0)
-                        {
-                            MessageBox.Show("Registrat correctament");
-=======
                     case 1:// REGISTRAR
                         if (Convert.ToInt32(trozos[1]) == 0)
                         {
                             MessageBox.Show("Registrado correctamente");
->>>>>>> dev-v4
                         }
                         else
                         {
                             MessageBox.Show("Error al registrar");
                         }
-                        TUsername.Clear();
-                        Password.Clear();
+                        
                         break;
-<<<<<<< HEAD
-                    case 2:
-=======
                     case 2://LOGIN
->>>>>>> dev-v4
                         if (Convert.ToInt32(trozos[1]) == 0)
                         {
                             MessageBox.Show("Login correcto");
                         }
                         else
-<<<<<<< HEAD
-                            MessageBox.Show("Persona no registrado");
-                        TUsername.Clear();
-                        Password.Clear();
-                        break;
-                    case 3:
-=======
                             MessageBox.Show("Persona no registrada");
                         //TUsername.Clear();
                         //Password.Clear();
                         break;
                     case 3://JUGADOR CON MAS PARTIDAS
->>>>>>> dev-v4
                         if(Convert.ToInt32(trozos[1])== 0)
                         {
                             MessageBox.Show("El ganador es:" + trozos[2]);
@@ -100,11 +81,7 @@ namespace Proyecto_cliente
                             MessageBox.Show("Error al consultar");
                         }
                         break;
-<<<<<<< HEAD
-                    case 4:
-=======
                     case 4://PARTIDA MAS LARGA,SU DURACION
->>>>>>> dev-v4
                         if(Convert.ToInt32(trozos[1])== -1)
                         {
                             MessageBox.Show("La duración de la partida es:" + Convert.ToInt32(trozos[2]));
@@ -114,11 +91,7 @@ namespace Proyecto_cliente
                             MessageBox.Show("Error al consultar");
                         }
                         break;
-<<<<<<< HEAD
-                    case 5:
-=======
                     case 5://PARTIDAS GANADAS DE UN JUGADOR
->>>>>>> dev-v4
                         if(Convert.ToInt32(trozos[1])== -1)
                         {
                             MessageBox.Show("El jugador ha ganado:" + Convert.ToInt32(trozos[2])+ "partidas");
@@ -128,14 +101,9 @@ namespace Proyecto_cliente
                             MessageBox.Show("Error al consultar");
                         }
                         break;
-<<<<<<< HEAD
-                    case 6:
-                        if(Convert.ToInt32(trozos[1])== 0)
-=======
 
                     case 6://MOSTRAR LISTA CONECTADOS
                         if (Convert.ToInt32(trozos[1]) == 0)
->>>>>>> dev-v4
                         {
                             int f = Convert.ToInt32(trozos[2]);
                             int i = 0;
@@ -147,29 +115,13 @@ namespace Proyecto_cliente
                                 dataGridView1.Rows.Add(trozos[i + 3]);
                                 i++;
                             }
-<<<<<<< HEAD
-                            //MessageBox.Show("soy LIBRE");
-                            //int b = Convert.ToInt32(trozos[2]);
-                            //int i = 0;
-                            //if (dataGridView1.Rows.Count != 0)
-                            //    dataGridView1.Rows.Clear();
-                            //while(i<b)
-                            //{
-                            //    dataGridView1.Rows.Add();
-                            //    dataGridView1.Rows[i].Cells[0].Value = trozos[i + 3];
-                            //    i++;
-                            //}
-=======
 
->>>>>>> dev-v4
                         }
                         else
                         {
                             MessageBox.Show("Error al consultar");
                         }
                         break;
-<<<<<<< HEAD
-=======
                     case 7://INVITAR          ***********************  N U E V O Version4
                         if(Convert.ToInt32(trozos[1])==0)
                         {
@@ -188,7 +140,7 @@ namespace Proyecto_cliente
                         {
                             //MessageBox.Show("Te han invitado");
                             DelegadoParaPonerTexto del = new DelegadoParaPonerTexto(Invitacio);
-                            this.Invoke (del, new Object[]{ "Te han invitado a jugar"});
+                            this.Invoke (del, new Object[]{trozos[2]});
                             invitacio = 1;
                         
                         }
@@ -197,7 +149,18 @@ namespace Proyecto_cliente
                             MessageBox.Show("Jugador no encontrado");
                         }
                         break;
->>>>>>> dev-v4
+                    case 8:
+                        
+                            //Mensaje de desconexión
+                            string mensaje = "0/";
+                            dataGridView1.Rows.Clear();
+                            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+                            server.Send(msg);
+                            Close();
+                            break;
+
+                         
+                        
 
                 }
             }
@@ -222,42 +185,41 @@ namespace Proyecto_cliente
             rpassword = contraseña;
         }
 
-      
-        private void Conectar_Click(object sender, EventArgs e)
+        public void Connectar()
         {
-            //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
-            //al que deseamos conectarnos
-<<<<<<< HEAD
-            IPAddress direc = IPAddress.Parse("192.168.56.101");
-            IPEndPoint ipep = new IPEndPoint(direc, 9050);
-=======
-            IPAddress direc = IPAddress.Parse("192.168.56.103");
-            IPEndPoint ipep = new IPEndPoint(direc, 9770);
->>>>>>> dev-v4
-
-
-            //Creamos el socket 
-            server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            try
             {
-                server.Connect(ipep);//Intentamos conectar el socket
-                this.BackColor = Color.Pink;
-                MessageBox.Show("Conectado");
+                //Creamos un IPEndPoint con el ip del servidor y puerto del servidor 
+                //al que deseamos conectarnos
+                IPAddress direc = IPAddress.Parse("192.168.56.101");
+                IPEndPoint ipep = new IPEndPoint(direc, 9036);
+
+
+                //Creamos el socket 
+                server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                try
+                {
+                    server.Connect(ipep);//Intentamos conectar el socket
+                    this.BackColor = Color.Pink;
+                    //MessageBox.Show("Conectado");
+
+                }
+                catch (SocketException)
+                {
+                    //Si hay excepcion imprimimos error y salimos del programa con return 
+                    MessageBox.Show("No he podido conectar con el servidor");
+                    return;
+                }
+                ThreadStart ts = delegate { Atenderservidor(); };
+                atender = new Thread(ts);
+                atender.Start();
+
 
             }
-            catch (SocketException)
-            {
-                //Si hay excepcion imprimimos error y salimos del programa con return 
-                MessageBox.Show("No he podido conectar con el servidor");
-                return;
-            }
-            ThreadStart ts = delegate { Atenderservidor(); };
-            atender = new Thread(ts);
-            atender.Start();
-
         }
+      
 
-        private void Desconectar_Click(object sender, EventArgs e)
+
+        public void Desconectar_Click(object sender, EventArgs e)
         {
             //Mensaje de desconexión
             string mensaje = "0/";
@@ -272,127 +234,53 @@ namespace Proyecto_cliente
             server.Close();
         }
 
-        private void IniciarSesion_Click(object sender, EventArgs e)
+
+        public int Login(string tusername, string tpassword)
         {
-            //codigo 1 inciar sesion
-            
-           
-                string mensaje = "2/" + TUsername.Text + "/" + Password.Text;
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-<<<<<<< HEAD
-                server.Send(msg);
-
-                ////Recibimos la respuesta del servidor
-                //byte[] msg2 = new byte[500];
-                //server.Receive(msg2);
-                //mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-               
-                //int registrado = Convert.ToInt32(mensaje);
-                //if (registrado == 1)
-                //{
-                //    MessageBox.Show("Usuario logeado correctamente");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Este usuario no esta registrado");
-                //    finalizado = true;
-                //}                    
-        }
-
-        private void Aceptar_Click(object sender, EventArgs e)
-        {
-            if (radioButton1.Checked) // CONSULTA 1. Jugador con mas victorias
-            {
-                // Quiere saber la longitud
-                string mensaje = "3/";
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje); // cojo el string y lo convierto a un vect de bytes
-                server.Send(msg);
-
-                //Recibimos la respuesta del servidor
-                //byte[] msg2 = new byte[80];
-                //server.Receive(msg2); // deja la respuesta
-                //mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0]; //convierto el vect en un string quiero q se quede con el 1r trozo
-                //MessageBox.Show("El jugador con mas victorias es: " + mensaje);
-            }
-            else if (MasLarga.Checked) //CONSULTA 2. 
-            {
-                string mensaje = "4/";
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                server.Send(msg);
-
-                ////Recibimos la respuesta del servidor
-                //byte[] msg2 = new byte[80];
-                //server.Receive(msg2);
-                //mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-                //MessageBox.Show("La partida más larga ha durado: " + mensaje);
-            
-            }
-            else // CONSULTA 3. Partidas ganadas por el jugador introducido por teclado
-            {
-                string mensaje = "5/" + textBox1.Text ;
-                // Enviamos al servidor el nombre tecleado
-                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-                server.Send(msg);
-
-                ////Recibimos la respuesta del servidor
-                //byte[] msg2 = new byte[80];
-                //server.Receive(msg2);
-                //mensaje = Encoding.ASCII.GetString(msg2).Split('\0')[0];
-                //MessageBox.Show(textBox1.Text + " ha ganado " + mensaje + "partidas");
-                
-=======
-                server.Send(msg);                  
-        }
-
-       
-
-        private void Registro_Click(object sender, EventArgs e)
-        {
-            // Envia el nombre y la constraseña del registro con el código 1 y separado por /
-            string mensaje = "1/" + Convert.ToString(TUsername.Text) + "/" + Convert.ToString(Password.Text);
+            string mensaje = "2/" + tusername + "/" + tpassword;
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
+
+
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            string[] trozos = Encoding.ASCII.GetString(msg2).Split('/');
+            if (Convert.ToInt32(trozos[1]) == 0)
+            {
+                SetUsername(tusername);
+
+                return 1;
+            }
+            else
+                return 0;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        public int Registrarse(string tusername, string tpassword)
         {
->>>>>>> dev-v4
-
+            // Envia el nombre y la constraseña del registro con el código 1 y separado por /
+            string mensaje = "1/" + tusername + "/" + tpassword;
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+            byte[] msg2 = new byte[80];
+            server.Receive(msg2);
+            string[] trozos = Encoding.ASCII.GetString(msg2).Split('/');
+            if (Convert.ToInt32(trozos[1]) == 0)
+            {
+                return 1;
+            }
+            else
+                return 0;
         }
+
+        
+
+     
 
 
         private void button3_Click(object sender, EventArgs e)//Invitar
         {
-<<<<<<< HEAD
-            // Envia el nombre y la constraseña del registro con el código 1 y separado por /
-            string mensaje = "1/" + Convert.ToString(TUsername.Text) + "/" + Convert.ToString(Password.Text);
-            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-            server.Send(msg);
-
-        //    byte[] msg2 = new byte[80];
-        //    server.Receive(msg2);
-        //    mensaje = Encoding.ASCII.GetString(msg2).Split('/')[0];
-        //    if (Convert.ToInt32(mensaje) == 1)
-        //    {
-        //        MessageBox.Show("Registrado correctament");
-        //    }
-        //    else 
-        //    { 
-        //        MessageBox.Show("Error al registrarse"); 
-        //    }
-        //    TUsername.Clear();
-        //    Password.Clear();
-        //}
-
-        //private void Conectados_Click(object sender, EventArgs e)
-        //{
-        //    string mensaje = "6/";
-        //    byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
-        //    server.Send(msg);
-=======
             string mensaje = "7/" + Convert.ToString(textBox2.Text);
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
             server.Send(msg);
@@ -408,7 +296,6 @@ namespace Proyecto_cliente
             byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje); // cojo el string y lo convierto a un vect de bytes
             server.Send(msg);
         }
->>>>>>> dev-v4
 
         private void consulta2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -419,28 +306,6 @@ namespace Proyecto_cliente
             server.Send(msg);
         }
 
-<<<<<<< HEAD
-        //    byte[] msg2 = new byte[80];
-        //    server.Receive(msg2);
-        //    mensaje = Encoding.ASCII.GetString(msg2);
-        //    mensaje = mensaje.TrimEnd('\0');
-        //    string[] trozos = mensaje.Split('/');
-        //    if (Convert.ToInt32(trozos[0]) == 6)
-        //    {
-        //        int f = Convert.ToInt32(trozos[1]);
-        //        dataGridView1.RowCount = f;
-        //        int i = 0;
-        //        while (i < f)
-        //        {
-        //            dataGridView1.Rows[i].Cells[0].Value = trozos[i + 2];
-        //            i++;
-        //        }
-        //    }
-        //    else 
-        //    { 
-        //        MessageBox.Show("peticion fallida"); 
-        //    }
-=======
         private void consulta3ToolStripMenuItem_Click(object sender, EventArgs e)//   Consulta 3
         {
             string mensaje = "5/" + textBox1.Text;
@@ -454,7 +319,6 @@ namespace Proyecto_cliente
                 byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
                 server.Send(msg);
             }
->>>>>>> dev-v4
         }
 
 
@@ -488,12 +352,53 @@ namespace Proyecto_cliente
                 invitacio = 0;
             }
         }
-<<<<<<< HEAD
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string usergrid = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            usergrid = usergrid.TrimEnd('\0');
+
+            if (rusername == usergrid)//se puede poner desde el servidor
+            {
+                MessageBox.Show("No te puedes invitar a ti mismo");
+            }
+            else
+            {
+                string mensaje = "7/" + usergrid;//construimos el mensaje para el servidor
+                byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);//lo preparamos
+                server.Send(msg);//enviamos el mensaje
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)//prueba
+        {
+            string missatge = "Bienvenido " + rusername;
+            DelegadoParaPonerTexto del = new DelegadoParaPonerTexto(Benvinguda);
+            this.Invoke(del, new Object[] { missatge });
+            Form3 F3 = new Form3();
+            F3.ShowDialog();
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
        
-        
-=======
->>>>>>> dev-v4
+        }
+
+        private void Desconectar_Click_1(object sender, EventArgs e)
+        {
+            //Mensaje de desconexión
+            string mensaje = "0/";
+            dataGridView1.Rows.Clear();
+            byte[] msg = System.Text.Encoding.ASCII.GetBytes(mensaje);
+            server.Send(msg);
+
+            // Nos desconectamos
+            atender.Abort();
+            this.BackColor = Color.Gray;
+            server.Shutdown(SocketShutdown.Both);
+            server.Close();
+        }
 
        
         
