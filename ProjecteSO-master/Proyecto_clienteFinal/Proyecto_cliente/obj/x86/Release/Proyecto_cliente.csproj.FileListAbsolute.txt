@@ -1,7 +1,0 @@
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\bin\Release\Proyecto_cliente.exe
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\bin\Release\Proyecto_cliente.pdb
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Release\Proyecto_cliente.Form1.resources
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Release\Proyecto_cliente.Properties.Resources.resources
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Release\Proyecto_cliente.csproj.GenerateResource.Cache
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Release\Proyecto_cliente.exe
-C:\Users\Usuari\Desktop\ProjecteSo\Proyecto_cliente\Proyecto_cliente\obj\x86\Release\Proyecto_cliente.pdb
